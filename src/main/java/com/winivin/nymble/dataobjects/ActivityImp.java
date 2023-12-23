@@ -1,21 +1,25 @@
 package com.winivin.nymble.dataobjects;
 
 import com.winivin.nymble.interfaces.dataobjects.Activity;
+import com.winivin.nymble.interfaces.dataobjects.Destination;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ActivityImp implements Activity {
 
     private final String NAME;
     private final String DESCRIPTION;
     private final Double COST;
     private final Integer CAPACITY;
-    private final String DESTINATION;
+    private Destination DESTINATION;
+    private Integer OCCUPIED;
 
-    public ActivityImp(String name, String description, Double cost, Integer capacity, String destination) {
+    public ActivityImp(String name, String description, Double cost, Integer capacity, Integer occupied) {
         this.NAME = name;
         this.DESCRIPTION = description;
         this.COST = cost;
         this.CAPACITY = capacity;
-        this.DESTINATION = destination;
+        this.OCCUPIED = occupied;
     }
 
     @Override
@@ -39,8 +43,25 @@ public class ActivityImp implements Activity {
     }
 
     @Override
-    public String getDestination() {
+    public Destination getDestination() {
         return this.DESTINATION;
+    }
+
+    @Override
+    public void setDestination(Destination destination) {
+        this.DESTINATION = destination;
+    }
+
+    @Override
+    public Integer getOccupied() {
+        return this.OCCUPIED;
+    }
+
+    @Override
+    public void increaseOccupancy() {
+        if (this.getOccupied() < this.getCapacity()) {
+            this.OCCUPIED = this.OCCUPIED + 1;
+        }
     }
 
 }

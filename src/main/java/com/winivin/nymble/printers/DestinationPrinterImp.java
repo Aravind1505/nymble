@@ -5,9 +5,11 @@ import com.winivin.nymble.interfaces.dataobjects.Destination;
 import com.winivin.nymble.interfaces.printers.ActivityPrinter;
 import com.winivin.nymble.interfaces.printers.DestinationPrinter;
 import jakarta.annotation.Resource;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class DestinationPrinterImp implements DestinationPrinter {
 
     @Resource(name="activityPrinterImp")

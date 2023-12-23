@@ -3,11 +3,13 @@ package com.winivin.nymble.finance;
 import com.winivin.nymble.interfaces.finance.AmoutRequired;
 import com.winivin.nymble.interfaces.dataobjects.Activity;
 import com.winivin.nymble.interfaces.dataobjects.Passenger;
+import org.springframework.stereotype.Component;
 
 import static com.winivin.nymble.GlobalConstants.PASSENGER_GOLD_TYPE;
 import static com.winivin.nymble.GlobalConstants.PASSENGER_STANDARD_TYPE;
 import static com.winivin.nymble.GlobalConstants.PASSENGER_PREMIUM_TYPE;
 
+@Component
 public class AmountRequiredImp implements AmoutRequired {
 
     @Override

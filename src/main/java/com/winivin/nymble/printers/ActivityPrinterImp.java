@@ -2,7 +2,9 @@ package com.winivin.nymble.printers;
 
 import com.winivin.nymble.interfaces.dataobjects.Activity;
 import com.winivin.nymble.interfaces.printers.ActivityPrinter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ActivityPrinterImp implements ActivityPrinter {
     @Override
     public void printDetails(Activity activity) {

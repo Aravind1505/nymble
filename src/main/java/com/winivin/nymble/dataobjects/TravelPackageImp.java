@@ -3,9 +3,11 @@ package com.winivin.nymble.dataobjects;
 import com.winivin.nymble.interfaces.dataobjects.Destination;
 import com.winivin.nymble.interfaces.dataobjects.Passenger;
 import com.winivin.nymble.interfaces.dataobjects.TravelPackage;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class TravelPackageImp implements TravelPackage {
 
     private final String NAME;

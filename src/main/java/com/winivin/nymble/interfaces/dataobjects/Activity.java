@@ -10,6 +10,12 @@ public interface Activity {
 
     public Integer getCapacity();
 
-    public String getDestination();
+    public Destination getDestination();
+
+    public Integer getOccupied();
+
+    public void increaseOccupancy();
+
+    public void setDestination(Destination destination);
 
 }

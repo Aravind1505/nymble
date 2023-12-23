@@ -2,10 +2,12 @@ package com.winivin.nymble.dataobjects;
 
 import com.winivin.nymble.interfaces.dataobjects.Activity;
 import com.winivin.nymble.interfaces.dataobjects.Passenger;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class PassengerImp implements  Passenger{
 
     private final String NAME;

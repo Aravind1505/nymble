@@ -3,9 +3,11 @@ package com.winivin.nymble.printers;
 import com.winivin.nymble.interfaces.dataobjects.TravelPackage;
 import com.winivin.nymble.interfaces.dataobjects.Passenger;
 import com.winivin.nymble.interfaces.printers.TravelPackagePrinter;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class TravelPackagePassengerListPrinter implements TravelPackagePrinter {
     @Override
     public void printDetails(TravelPackage travelPackage) {

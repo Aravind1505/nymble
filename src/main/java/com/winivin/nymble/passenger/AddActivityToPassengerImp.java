@@ -5,7 +5,9 @@ import com.winivin.nymble.interfaces.dataobjects.Passenger;
 import com.winivin.nymble.interfaces.finance.AmoutRequired;
 import com.winivin.nymble.interfaces.passenger.AddActivityToPassenger;
 import jakarta.annotation.Resource;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AddActivityToPassengerImp implements AddActivityToPassenger {
 
     @Resource(name="amountRequiredImp")
@@ -20,6 +22,7 @@ public class AddActivityToPassengerImp implements AddActivityToPassenger {
         if (passengerBalance > activityAmount) {
             passenger.addActivity(activity);
             passenger.setBalance(passengerBalance - activityAmount);
+            activity.increaseOccupancy();
         }
     }
 
